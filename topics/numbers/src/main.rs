@@ -63,16 +63,16 @@ fn main() {
     // Rang
     // exercise 9
     // 🌟🌟 Two goals: 1. Modify assert! to make it work 2. Make println! output: 97 - 122
-    // let mut sum:i32 = 0;
-    // for i in -3..2 { // -3 included and 2 excluded here, to include 2 we must have to add = signt like -3..=2
-    //     sum += i;
-    // }
-    // assert!(sum == -5);
+    let mut sum:i32 = 0;
+    for i in -3..2 { // -3 included and 2 excluded here, to include 2 we must have to add = signt like -3..=2
+        sum += i;
+    }
+    assert!(sum == -5);
 
-    // for c in 'a'..='z'{ // print lowercase abc from a to z
-    //     // println!("{}", c);  // it will print abc a to z
-    //     println!("{}", c as u32); // it will print ascii values of a to z
-    // }
+    for c in 'a'..='z'{ // print lowercase abc from a to z
+        // println!("{}", c);  // it will print abc a to z
+        println!("{}", c as u32); // it will print ascii values of a to z
+    }
 
     // Computations
     // exercise 11
