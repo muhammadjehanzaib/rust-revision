@@ -26,7 +26,6 @@ fn main() {
     //     println!("success!");
     // }
 
-
     // excersice 4
     // let f = true;
     // let t = true && true;
@@ -35,7 +34,7 @@ fn main() {
 
     // unit type
     // excersice 5
-    
+
     // let _v: () = ();
 
     // let v: (i32, i32) = (2,3);
@@ -49,15 +48,13 @@ fn main() {
     // assert!(size_of_val(&uint) == 4); // it wouldn't work becuase the size of unit is 0
     assert!(size_of_val(&uint) == 0);
     println!("success");
-
 }
 
 #[allow(dead_code)] // it allow us to write unused code without warning
-fn implicitly_ret_unit() { // when a function dosen't return anything it returns unittype ()
+fn implicitly_ret_unit() {
+    // when a function dosen't return anything it returns unittype ()
     println!("i will return a ()");
 }
-
-
 
 #[allow(dead_code)] // it allow us to write unused code without warning
 fn print_char(c: char) {
