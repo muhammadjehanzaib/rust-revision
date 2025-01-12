@@ -22,9 +22,24 @@ fn main() {
     // println!("{}", s);
 
     // exercise 5
-    let x: (i32, i32, (), String) = (1, 2, (), "hello".to_string());
-    let y = x.clone();
-    println!("{:?} , {:?}", x, y);
+    // let x: (i32, i32, (), String) = (1, 2, (), "hello".to_string());
+    // let y = x.clone();
+    // println!("{:?} , {:?}", x, y);
+
+
+    // Mutability
+    // mutability can be changed when ownership is transfered
+    //exercise 6
+    // let s = String::from("hello");
+    // let mut s1 = s;
+
+    // s1.push_str("world");
+    // println!("Success!");
+
+    // exercise 7?
+
+
+
 }
 
 #[allow(dead_code)]
