@@ -12,8 +12,19 @@ fn main() {
     // println!("{}", s2);
 
     //exercise 3
-    let s = give_ownership();
-    println!("{}", s);
+    // let s = give_ownership();
+    // println!("{}", s);
+
+    // exercise 4
+    // by using clone
+    // let s = String::from("Hello World");
+    // print_str(s.clone());
+    // println!("{}", s);
+
+    // exercise 5
+    let x: (i32, i32, (), String) = (1, 2, (), "hello".to_string());
+    let y = x.clone();
+    println!("{:?} , {:?}", x, y);
 }
 
 #[allow(dead_code)]
@@ -22,6 +33,12 @@ fn take_ownership(s: String) -> String {
     s
 }
 
+#[allow(dead_code)]
+fn print_str(s: String) {
+    println!("{}", s);
+}
+
+#[allow(dead_code)]
 // Only modify the code below!
 fn give_ownership() -> String {
     let s = String::from("Hello world");
