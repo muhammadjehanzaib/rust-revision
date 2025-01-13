@@ -96,3 +96,18 @@ fn give_ownership() -> String {
 }
 ```
 Explanation: This function returns a String that demonstrates ownership being returned from a function.
+
+# Exercise 7: Using Box with Ownership
+
+In this exercise, we create a Box<i32> to demonstrate ownership and mutability with heap-allocated data. We mutate the value inside the box, then assert its value and print a success message.
+
+```rust
+let x: Box<i32> = Box::new(5);
+let mut y: Box<i32> = Box::new(1);
+
+*y = 4;
+
+assert_eq!(*x, 5);
+println!("Success");
+```
+Explanation: Here, x is a Box<i32> that points to a value on the heap. We mutate the value inside y but do not alter x. The assertion confirms that the value of x remains unchanged after modifying y. This demonstrates how mutability works with heap-allocated data inside a Box.
