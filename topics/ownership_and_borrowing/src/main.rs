@@ -22,10 +22,9 @@ fn main() {
     // println!("{}", s);
 
     // exercise 5
-    // let x: (i32, i32, (), String) = (1, 2, (), "hello".to_string());
-    // let y = x.clone();
+    // let x: (i32, i32, (), &str) = (1, 2, (), "hello");
+    // let y = x;
     // println!("{:?} , {:?}", x, y);
-
 
     // Mutability
     // mutability can be changed when ownership is transfered
@@ -37,9 +36,6 @@ fn main() {
     // println!("Success!");
 
     // exercise 7?
-
-
-
 }
 
 #[allow(dead_code)]
@@ -58,6 +54,6 @@ fn print_str(s: String) {
 fn give_ownership() -> String {
     let s = String::from("Hello world");
     // Convert String to Vec
-    let _s = s.clone().into_bytes();
+    let _s = s.as_bytes();
     s
 }
