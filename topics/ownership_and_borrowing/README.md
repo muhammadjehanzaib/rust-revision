@@ -42,3 +42,25 @@ println!("{}", s);
 ```
 Explanation: The clone() method creates a new copy of the String that is passed to print_str. This allows us to use s in the calling code after it's passed into the function.
 
+# Exercise 5: Destructuring a Tuple
+In this exercise, we demonstrate ownership and immutability with tuples. A tuple is moved when assigned to another variable, and its contents are also moved if they implement the Copy trait.
+
+```rust
+let x: (i32, i32, (), &str) = (1, 2, (), "hello");
+let y = x;
+println!("{:?} , {:?}", x, y);
+```
+Explanation: Tuples can store values of different types, and when a tuple is moved, ownership of its contents is also transferred. The code will not compile because x is moved to y and cannot be accessed after that.
+
+# Exercise 6: Mutability with Ownership Transfer
+
+In this exercise, we create a mutable variable and push new data into it. It demonstrates how mutability works when ownership is transferred.
+
+```rust
+let s = String::from("hello");
+let mut s1 = s;
+
+s1.push_str("world");
+println!("Success!");
+```
+Explanation: The ownership of s is transferred to s1. Since s1 is mutable, we can modify it. Rust allows the modification of the data after transferring ownership to a mutable variable.
