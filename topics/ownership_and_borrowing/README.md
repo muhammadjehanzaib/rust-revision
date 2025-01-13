@@ -64,3 +64,35 @@ s1.push_str("world");
 println!("Success!");
 ```
 Explanation: The ownership of s is transferred to s1. Since s1 is mutable, we can modify it. Rust allows the modification of the data after transferring ownership to a mutable variable.
+
+# Function
+
+```rust
+#[allow(dead_code)]
+fn take_ownership(s: String) -> String {
+    println!("{}", s);
+    s
+}
+```
+Explanation: This function takes ownership of the String and returns it, demonstrating how ownership can be passed around.
+
+# print_str
+```rust
+#[allow(dead_code)]
+fn print_str(s: String) {
+    println!("{}", s);
+}
+```
+Explanation: This function takes ownership of a String and prints it. Once the function ends, the ownership of s is dropped.
+
+# give_ownership
+
+```rust 
+#[allow(dead_code)]
+fn give_ownership() -> String {
+    let s = String::from("Hello world");
+    let _s = s.as_bytes(); // Convert String to Vec
+    s
+}
+```
+Explanation: This function returns a String that demonstrates ownership being returned from a function.
