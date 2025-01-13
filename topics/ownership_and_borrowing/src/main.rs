@@ -35,7 +35,14 @@ fn main() {
     // s1.push_str("world");
     // println!("Success!");
 
-    // exercise 7?
+    // exercise 7
+    let x: Box<i32> = Box::new(5);
+    let mut y: Box<i32> = Box::new(1);
+
+    *y = 4;
+
+    assert_eq!(*x, 5);
+    println!("Success");
 }
 
 #[allow(dead_code)]
