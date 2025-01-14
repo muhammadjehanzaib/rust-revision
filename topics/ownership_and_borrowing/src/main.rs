@@ -36,13 +36,26 @@ fn main() {
     // println!("Success!");
 
     // exercise 7
-    let x: Box<i32> = Box::new(5);
-    let mut y: Box<i32> = Box::new(1);
+    // let x: Box<i32> = Box::new(5);
+    // let mut y: Box<i32> = Box::new(1);
 
-    *y = 4;
+    // *y = 4;
 
-    assert_eq!(*x, 5);
-    println!("Success");
+    // assert_eq!(*x, 5);
+    // println!("Success");
+
+    // exercise 8
+    // let t:(String, String) = (String::from("hello"), String::from("World"));
+
+    // let _s: String = t.0;
+
+    // println!("{}", t.1);
+
+    // exercise 9
+    let t: (String, String) = (String::from("hello"), String::from("world"));
+    //fill the blanks
+    let (s1, s2) = t.clone();
+    println!("{:?}, {:?} , {:?}", s1, s2, t);
 }
 
 #[allow(dead_code)]
