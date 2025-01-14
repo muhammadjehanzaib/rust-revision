@@ -111,3 +111,26 @@ assert_eq!(*x, 5);
 println!("Success");
 ```
 Explanation: Here, x is a Box<i32> that points to a value on the heap. We mutate the value inside y but do not alter x. The assertion confirms that the value of x remains unchanged after modifying y. This demonstrates how mutability works with heap-allocated data inside a Box.
+
+# Exercise 8: Tuple Ownership with Move
+In this exercise, we move the first element of a tuple into a new variable. This demonstrates how ownership is transferred when destructuring a tuple.
+
+```rust
+let t: (String, String) = (String::from("hello"), String::from("World"));
+
+let _s: String = t.0;
+
+println!("{}", t.1);
+```
+Explanation: When the first element (t.0) is moved into _s, it is no longer available in the original tuple t. The second element t.1 can still be accessed.
+
+# Exercise 9: Cloning a Tuple
+
+Here, we use clone to clone a tuple, and destructure it into two new variables. This demonstrates the use of cloning with complex types like tuples.
+
+```rust
+let t: (String, String) = (String::from("hello"), String::from("world"));
+let (s1, s2) = t.clone();
+println!("{:?}, {:?} , {:?}", s1, s2, t);
+```
+Explanation: By cloning the tuple t, we create a copy of the original tuple's values. The cloned values are then destructured into s1 and s2. The original tuple t remains intact and is printed after the clone.
