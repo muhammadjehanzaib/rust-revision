@@ -1,4 +1,5 @@
 # Rust Code Explanation
+All excercises are covered from rust by practice.
 
 This Rust program demonstrates various concepts, including statements and expressions, and exercises to reinforce those concepts.
 
