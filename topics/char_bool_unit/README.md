@@ -1,4 +1,5 @@
 # Rust Data Types: Characters, Booleans, and Unit Type Exercises
+All excercises are covered from rust by practice.
 
 This document covers exercises related to characters (`char`), booleans (`bool`), and the unit type `()` in Rust.
 
