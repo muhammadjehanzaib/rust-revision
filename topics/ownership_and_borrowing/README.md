@@ -1,4 +1,5 @@
 # Ownership and Mutability in Rust - Exercises
+All excercises are covered from rust by practice.
 
 This document provides a series of exercises aimed at exploring **ownership** and **mutability** in Rust. The exercises help you understand how Rust's ownership model works, as well as the interaction between ownership and mutability.
 
