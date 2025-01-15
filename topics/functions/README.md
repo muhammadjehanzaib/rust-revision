@@ -1,4 +1,5 @@
 # Rust Code Exercises
+All excercises are covered from rust by practice.
 
 ## Exercise 1: Functions and Assertions
 
