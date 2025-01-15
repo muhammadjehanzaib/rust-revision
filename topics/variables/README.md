@@ -1,4 +1,5 @@
 # Rust Variables by Example
+All excercises are covered from rust by practice.
 
 This document explores core Rust variable concepts through code examples and explanations.
 
