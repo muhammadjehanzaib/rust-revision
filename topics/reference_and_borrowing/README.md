@@ -1,4 +1,5 @@
 # References and Borrowing in Rust - Exercises
+All excercises are covered from rust by practice.
 
 This document provides a series of exercises aimed at exploring **references** and **borrowing** in Rust. The exercises help you understand how Rust handles references and borrowing, ensuring memory safety while allowing for efficient data access.
 
