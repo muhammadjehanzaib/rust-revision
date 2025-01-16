@@ -36,10 +36,9 @@ fn main() {
     // println!("Success");
 
     // Exercise 6
-    let s1 = String::from("hello,");
-    let s2: &str = &String::from("world");
+    let s1 = String::from("hello,");;   let s2: &str = &String::from("world");
     let s3 = s1 + s2;
-    assert_eq!(s3, "hello,world");
+    assert_eq!(s4, "hello,world");
     println!("Success");
 
 }
