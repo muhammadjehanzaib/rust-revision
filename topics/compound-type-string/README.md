@@ -67,3 +67,15 @@ println!("Success");
 ```
 This demonstrates the replace method, which creates a new String with the replacement. The original String (s) remains unchanged.
 
+### Exercise 6 (Correctness)
+
+```rust
+let s1 = String::from("hello,");
+let s2 = String::from("world"); // Corrected: s2 should be a String
+let s3 = s1 + &s2; // Corrected: s2 needs a & to be a &str
+assert_eq!(s3, "hello,world");
+println!("Success");
+```
+
+This exercise was the most problematic in the original code. The + operator for String concatenation takes a &str as its right-hand operand. Therefore, s2 needs to be converted to a &str using &s2. Also, s2 should be a String, not &String. There was also a missing s4 variable that has been corrected to s3.
+
