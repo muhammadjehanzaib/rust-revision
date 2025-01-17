@@ -53,6 +53,29 @@ fn main() {
     // // let s1: &str = &s;
     // let _s1: &str = s.as_str();
     // println!("Success");
+
+    // Exercise 9
+    // String Escapes
+    // let byte_escape = "I'm writing Ru\x73\x74!";
+    // println!("What are you doing\x3F (\\x3F means ?) {}", byte_escape);
+
+    // Excercise 10
+    // let raw_str = r"Escapes don't work here: \x3F \u{211D}";
+    // println!("{}", raw_str);
+
+    // Exercise 11
+    // let s1 = String::from("hi,中国");
+    // let h = &s1[0..1];
+    // assert_eq!(h,"h");
+
+    // let h1 = &s1[3..6]; // 中 takes 3 bytes that why we added 3 to 6
+    // println!("{}", h1);
+
+    // Excercise 12
+    for c in "你好，世界".chars() {
+        println!("{}", c);
+    }
+
 }
 
 // #[allow(dead_code)]
