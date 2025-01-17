@@ -36,14 +36,28 @@ fn main() {
     // println!("Success");
 
     // Exercise 6
-    let s1 = String::from("hello,");
-    let s2: &str = &String::from("world");
-    let s3 = s1 + s2;
-    assert_eq!(s4, "hello,world");
-    println!("Success");
+    // let s1 = String::from("hello,");
+    // let s2: &str = &String::from("world");
+    // let s3 = s1 + s2;
+    // assert_eq!(s4, "hello,world");
+    // println!("Success");
+
+    // Exercise 7
+    // &str and String
+    // let s = "Hello, world";
+    // // greeting(s.to_string()); // or
+    // greeting(String::from(s));
+
+    // Exercise 8
+    
+
 }
 
+// #[allow(dead_code)]
+// fn greeting(s: &str) {
+//     println!("{}", s);
+// }
 #[allow(dead_code)]
-fn greeting(s: &str) {
+fn greeting(s: String) {
     println!("{}", s);
 }
