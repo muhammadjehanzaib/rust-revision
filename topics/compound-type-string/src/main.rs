@@ -59,7 +59,7 @@ fn main() {
     // let byte_escape = "I'm writing Ru\x73\x74!";
     // println!("What are you doing\x3F (\\x3F means ?) {}", byte_escape);
 
-    // Excercise 10
+    // Exercise 10
     // let raw_str = r"Escapes don't work here: \x3F \u{211D}";
     // println!("{}", raw_str);
 
@@ -71,7 +71,7 @@ fn main() {
     // let h1 = &s1[3..6]; // 中 takes 3 bytes that why we added 3 to 6
     // println!("{}", h1);
 
-    // Excercise 12
+    // Exercise 12
     for c in "你好，世界".chars() {
         println!("{}", c);
     }
