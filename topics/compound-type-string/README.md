@@ -79,3 +79,70 @@ println!("Success");
 
 This exercise was the most problematic in the original code. The + operator for String concatenation takes a &str as its right-hand operand. Therefore, s2 needs to be converted to a &str using &s2. Also, s2 should be a String, not &String. There was also a missing s4 variable that has been corrected to s3.
 
+### Exercise 7
+
+```rust
+let s = "Hello, world";
+greeting(String::from(s)); // or s.to_string() or s.to_owned()
+```
+
+Explanation:
+
+This shows how to convert a &str to a String using String::from(), to_string(), or to_owned().
+
+### Exercise 8
+
+```rust
+let s = "hello, world".to_string();
+let _s1: &str = s.as_str(); // or &s[..]
+println!("Success");
+```
+Explaination:
+This demonstrates how to get a &str view of a String using as_str() or &s[..].
+
+### Exercise 9
+
+```rust
+let byte_escape = "I'm writing Ru\x73\x74!";
+println!("What are you doing\x3F (\\x3F means ?) {}", byte_escape);
+```
+
+This shows byte escapes in strings (\xHH, where HH is a hexadecimal number).
+
+
+### Exercsie 10
+
+```rust
+let raw_str = r"Escapes don't work here: \x3F \u{211D}";
+println!("{}", raw_str);
+```
+Explanation:
+
+This demonstrates raw strings (r"..."), where escape sequences are treated literally.
+
+
+### Exercise 11
+
+```rust
+let s1 = String::from("hi,中国");
+let h = &s1[0..1];
+assert_eq!(h, "h");
+
+let h1 = &s1[3..6]; // 中 takes 3 bytes in UTF-8
+println!("{}", h1);
+```
+
+Explanation:
+
+This shows string slicing with UTF-8 characters. "中" takes 3 bytes, so the slice [3..6] is needed to get it.
+
+### Exercise 12
+
+```rust
+for c in "你好，世界".chars() {
+    println!("{}", c);
+}
+```
+Explanation:
+
+This demonstrates iterating over characters in a string using the chars() method, which correctly handles UTF-8.
