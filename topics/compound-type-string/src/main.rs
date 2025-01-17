@@ -45,12 +45,14 @@ fn main() {
     // Exercise 7
     // &str and String
     // let s = "Hello, world";
-    // // greeting(s.to_string()); // or
+    // // greeting(s.to_string()); // or s.to_owned()
     // greeting(String::from(s));
 
     // Exercise 8
-    
-
+    // let s = "hello, world".to_string();
+    // // let s1: &str = &s;
+    // let _s1: &str = s.as_str();
+    // println!("Success");
 }
 
 // #[allow(dead_code)]
