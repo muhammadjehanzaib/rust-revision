@@ -50,8 +50,6 @@ fn main() {
     } else {
         panic!("Never let me run this");
     }
-
-
 }
 
 // Exercise 5
