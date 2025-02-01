@@ -22,7 +22,7 @@ fn main() {
 
     // for (name, score) in scores {
     //     println!("The score of {} is {}", name, score);
-    // }    
+    // }
 
     // Exercise 2
 
@@ -48,8 +48,5 @@ fn main() {
     let mut player_state = HashMap::new();
     player_state.entry("health").or_insert(100);
 
-    assert_eq!(player_state["health"], 100);    
-
-
-
+    assert_eq!(player_state["health"], 100);
 }
