@@ -45,22 +45,48 @@ fn main() {
 
     // Exercise 3
 
-    let mut player_state = HashMap::new();
-    player_state.entry("health").or_insert(100);
+    // let mut player_state = HashMap::new();
+    // player_state.entry("health").or_insert(100);
 
-    assert_eq!(player_state["health"], 100);
+    // assert_eq!(player_state["health"], 100);
 
-    player_state.entry("health").or_insert_with(random_stat_buff);
-    assert_eq!(player_state["health"], 100);
+    // player_state.entry("health").or_insert_with(random_stat_buff);
+    // assert_eq!(player_state["health"], 100);
 
-    let health: &mut u8 = player_state.entry("health").or_insert(50);
-    assert_eq!(health, &100);
-    *health -= 50;
-    assert_eq!(*health, 50);
-    println!("Success!");
+    // let health: &mut u8 = player_state.entry("health").or_insert(50);
+    // assert_eq!(health, &100);
+    // *health -= 50;
+    // assert_eq!(*health, 50);
+    // println!("Success!");
+
+    // Exercise 4
+    let viking = HashMap::from([
+        (Viking::new("Einar", "Norway"), 25),
+        (Viking::new("Olaf", "Denmark"), 24),
+        (Viking::new("Harald", "Iceland"), 12),
+    ]);
+
+    for (vikin, health) in &viking {
+        println!("{:?} has {} hp", vikin, health);
+    } 
 
 }
-
-fn random_stat_buff() -> u8 {
-    42
+#[derive(Debug, Eq, Hash, PartialEq)]
+struct Viking {
+    name: String,
+    country: String,
 }
+
+impl Viking {
+    fn new(name:&str, country:&str) -> Self{
+        Self{
+            name: name.to_string(),
+            country: country.to_string(),
+        }
+    }
+}
+
+
+// fn random_stat_buff() -> u8 {
+//     42
+//}
