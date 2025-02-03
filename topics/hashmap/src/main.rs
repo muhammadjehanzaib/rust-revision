@@ -68,22 +68,36 @@ fn main() {
 
     // for (vikin, health) in &viking {
     //     println!("{:?} has {} hp", vikin, health);
-    // } 
+    // }
 
     // Exercise 5
-    let mut map: HashMap<i32, i32> = HashMap::with_capacity(100);
-    map.insert(1, 2);
-    map.insert(3, 4);
+    // let mut map: HashMap<i32, i32> = HashMap::with_capacity(100);
+    // map.insert(1, 2);
+    // map.insert(3, 4);
 
-    assert!(map.capacity() >= 100);
+    // assert!(map.capacity() >= 100);
 
-    map.shrink_to(50);
-    assert!(map.capacity() >= 50);
+    // map.shrink_to(50);
+    // assert!(map.capacity() >= 50);
 
-    map.shrink_to_fit();
-    assert!(map.capacity() >= 2);
-    println!("Success");
+    // map.shrink_to_fit();
+    // assert!(map.capacity() >= 2);
+    // println!("Success");
 
+    // Exercsie 6
+    let v1 = 10;
+    let mut m1 = HashMap::new();
+    m1.insert(v1, v1);
+    println!("v1 is still usable after inserting to hashmap : {}", v1);
+
+    let v2 = "hello".to_string();
+    let mut m2 = HashMap::new();
+    // Ownership moved here
+    m2.insert(&v2, v1);
+
+    assert_eq!(v2, "hello");
+
+    println!("Success!");
 }
 // #[derive(Debug, Eq, Hash, PartialEq)]
 // struct Viking {
@@ -99,7 +113,6 @@ fn main() {
 //         }
 //     }
 // }
-
 
 // fn random_stat_buff() -> u8 {
 //     42
