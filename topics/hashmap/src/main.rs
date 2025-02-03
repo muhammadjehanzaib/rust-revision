@@ -49,4 +49,18 @@ fn main() {
     player_state.entry("health").or_insert(100);
 
     assert_eq!(player_state["health"], 100);
+
+    player_state.entry("health").or_insert_with(random_stat_buff);
+    assert_eq!(player_state["health"], 100);
+
+    let health: &mut u8 = player_state.entry("health").or_insert(50);
+    assert_eq!(health, &100);
+    *health -= 50;
+    assert_eq!(*health, 50);
+    println!("Success!");
+
+}
+
+fn random_stat_buff() -> u8 {
+    42
 }
