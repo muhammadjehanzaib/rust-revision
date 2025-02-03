@@ -60,31 +60,45 @@ fn main() {
     // println!("Success!");
 
     // Exercise 4
-    let viking = HashMap::from([
-        (Viking::new("Einar", "Norway"), 25),
-        (Viking::new("Olaf", "Denmark"), 24),
-        (Viking::new("Harald", "Iceland"), 12),
-    ]);
+    // let viking = HashMap::from([
+    //     (Viking::new("Einar", "Norway"), 25),
+    //     (Viking::new("Olaf", "Denmark"), 24),
+    //     (Viking::new("Harald", "Iceland"), 12),
+    // ]);
 
-    for (vikin, health) in &viking {
-        println!("{:?} has {} hp", vikin, health);
-    } 
+    // for (vikin, health) in &viking {
+    //     println!("{:?} has {} hp", vikin, health);
+    // } 
+
+    // Exercise 5
+    let mut map: HashMap<i32, i32> = HashMap::with_capacity(100);
+    map.insert(1, 2);
+    map.insert(3, 4);
+
+    assert!(map.capacity() >= 100);
+
+    map.shrink_to(50);
+    assert!(map.capacity() >= 50);
+
+    map.shrink_to_fit();
+    assert!(map.capacity() >= 2);
+    println!("Success");
 
 }
-#[derive(Debug, Eq, Hash, PartialEq)]
-struct Viking {
-    name: String,
-    country: String,
-}
+// #[derive(Debug, Eq, Hash, PartialEq)]
+// struct Viking {
+//     name: String,
+//     country: String,
+// }
 
-impl Viking {
-    fn new(name:&str, country:&str) -> Self{
-        Self{
-            name: name.to_string(),
-            country: country.to_string(),
-        }
-    }
-}
+// impl Viking {
+//     fn new(name:&str, country:&str) -> Self{
+//         Self{
+//             name: name.to_string(),
+//             country: country.to_string(),
+//         }
+//     }
+// }
 
 
 // fn random_stat_buff() -> u8 {
