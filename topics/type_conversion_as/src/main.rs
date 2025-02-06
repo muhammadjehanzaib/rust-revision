@@ -1,5 +1,5 @@
 fn main() {
-
+    // Exercise 1
     let decimal = 97.123_f32;
 
     let integer: u8 = decimal as u8;
